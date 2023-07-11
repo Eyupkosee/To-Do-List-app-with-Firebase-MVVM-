@@ -6,10 +6,30 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewViewModel()
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                Button {
+                    do {
+                        try Auth.auth().signOut()
+                        // Oturum kapatma işlemi başarılı oldu
+                    } catch let error {
+                        // Hata durumunda burası çalışacak
+                        print("Oturum kapatma hatası: \(error.localizedDescription)")
+                    }
+                    
+                } label: {
+                    Text("çık")
+                }
+
+            }.navigationTitle("Profile")
+        }
     }
 }
 

@@ -9,14 +9,25 @@ import SwiftUI
 
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewViewModal()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
+                TabView{
+                    ToDoListView(userId: viewModel.currentUserId)
+                        .tabItem {
+                            Label("Home", systemImage: "house")
+                            
+                        }
+                    ProfileView()
+                        .tabItem {
+                            Label("Profile", systemImage: "person.circle")
+                        }
+                }
+            }else{
+                LoginView()
+            }
         }
-        .padding()
     }
 }
 
