@@ -1,6 +1,6 @@
 # To Do List app with Firebase(MVVM clean architecture)
 
-<img src="https://github.com/Eyupkosee/To-Do-List-app-with-Firebase-MVVM-/assets/89103093/b4b030cc-37df-4b5a-85d4-100130e38677" width="400" height="700">
+<img src="https://github.com/Eyupkosee/To-Do-List-app-with-Firebase-MVVM-/assets/89103093/b4b030cc-37df-4b5a-85d4-100130e38677" width="400" height="700" style="margin-right: 40px;">
 
 <img src="https://github.com/Eyupkosee/To-Do-List-app-with-Firebase-MVVM-/assets/89103093/9848c284-2584-48a9-9e2a-b94fed89104d" width="400" height="700">
 
